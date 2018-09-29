@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.io.File;
@@ -41,10 +42,10 @@ public class Base {
 
     @Parameters({"OS","appType","deviceType", "deviceName","version"})
     @BeforeMethod
-    public void setUp(String OS,String appType,String deviceType,String deviceName,
-                      String version)throws IOException,InterruptedException{
+    public void setUp(@Optional String OS, @Optional String appType,@Optional String deviceType, @Optional String deviceName,
+                      @Optional String version)throws IOException,InterruptedException{
 
-        if(OS.equalsIgnoreCase("ios")){
+        if(OS.equalsIgnoreCase("iOS")){
             if(appType.contains("iPhone")){
                 appDirectory = new File("IOS/src/app");
                 findApp = new File(appDirectory,"UICatalog6.1.app.zip");
@@ -68,8 +69,6 @@ public class Base {
                     ad = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 }
-
-
             }else if(appType.equalsIgnoreCase("iPad 2")){
                 appDirectory = new File("IOS/src/app");
                 findApp = new File(appDirectory,"UICatalog6.1.app.zip");
@@ -92,10 +91,8 @@ public class Base {
                     cap.setCapability(MobileCapabilityType.APP, findApp.getAbsolutePath());
                     ad = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
                 }
             }
-
         }else if(OS.contains("Android")){
             if(appType.contains("Phone")){
                 appDirectory = new File("Android/src/app");
@@ -119,7 +116,6 @@ public class Base {
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 }
-
             }else if(OS.equalsIgnoreCase("Tablets")){
                 if(deviceType.equalsIgnoreCase("RealDevice")){
                     cap = new DesiredCapabilities();

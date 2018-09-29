@@ -20,6 +20,5 @@ public class TextFieldsTest extends NavigateUi {
         UiCatalog ui = PageFactory.initElements(ad, UiCatalog.class);
         ui.getTextFields();
         textFields.writeTextToFields();
-
     }
 }

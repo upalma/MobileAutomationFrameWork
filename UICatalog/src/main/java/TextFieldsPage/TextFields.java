@@ -8,16 +8,16 @@ import common.Base;
 public class TextFields extends Base{
 
     public void typeOnUiTextField(){
-        typeByXpath("//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]", "Architecture");
+        typeByXpath("//XCUIElementTypeTextField[@name=\"Normal\"]", "Architecture");
     }
     public void typeOnUiTextFieldRounded(){
-        typeByXpath("//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]", "Rounded");
+        typeByXpath("//XCUIElementTypeTextField[@name=\"Rounded\"]", "Rounded");
     }
     public void typeOnUiTextFieldSecure(){
-        typeByXpath("//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[4]", "test123");
-    }
+        typeByXpath("//XCUIElementTypeSecureTextField[@name=\"Secure\"]", "test123");
+   }
     public void typeOnUiTextFieldLeftView(){
-        typeByXpath("//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[7]", "Secure");
+        typeByXpath("//XCUIElementTypeTextField[@name=\"Check\"]", "Secure");
     }
 
     public void writeTextToFields()throws InterruptedException{
