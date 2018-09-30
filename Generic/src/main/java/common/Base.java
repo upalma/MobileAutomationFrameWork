@@ -25,9 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by mrahman on 9/5/15.
- */
 public class Base {
 
     public static AppiumDriver ad = null;
@@ -136,14 +133,8 @@ public class Base {
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 }
-
             }
-
         }
-
-
-
-
     }
 
     @AfterMethod
@@ -172,7 +163,6 @@ public class Base {
         for(WebElement element:elements){
             text.add(element.getText());
         }
-
         return text;
     }
     public static void scrollKeys(AppiumDriver driver, String[] list, String parent) {
