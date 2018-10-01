@@ -5,17 +5,15 @@ import common.Base;
 import navigate.NavigateUi;
 import UiCatalogPage.UiCatalog;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static common.Base.ad;
 
-/**
- * Created by mrahman on 9/5/15.
- */
 public class ButtonTest extends Base {
 
     Buttons buttons;
-    //@Test
+    @BeforeMethod
     public void navigate()throws InterruptedException{
         UiCatalog ui = PageFactory.initElements(ad, UiCatalog.class);
         ui.getButtonPage();
@@ -25,5 +23,9 @@ public class ButtonTest extends Base {
     @Test
     public void clickOnImageButton(){
        buttons.backgroundImageClick();
+    }
+    @Test
+    public void clickOnbuttonWithImage(){
+        buttons.buttonWithImageClick();
     }
 }

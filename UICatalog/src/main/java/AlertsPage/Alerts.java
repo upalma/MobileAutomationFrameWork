@@ -1,30 +1,30 @@
 package AlertsPage;
 
 import common.Base;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-/**
- * Created by mrahman on 1/15/17.
- */
+
 public class Alerts extends Base{
-    public void showActionSheetSimple(){
-        clickByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[1]");
+    @FindBy (xpath = "(//XCUIElementTypeStaticText[@name=\"Show OK-Cancel\"])[1]")
+    WebElement alertPageShowSimple;
+    @FindBy (xpath = "(//XCUIElementTypeStaticText[@name=\"Show OK-Cancel\"])[1]")
+    WebElement alertPageShowOkCancel;
+    @FindBy (xpath = "//XCUIElementTypeStaticText[@name=\"Show Customized\"]")
+    WebElement alertPageShowCustomized;
+    @FindBy (xpath = "(//XCUIElementTypeStaticText[@name=\"Show Simple\"])[2]")
+    WebElement alertViewShowOkSimple;
+
+    public void clickAlertPageShowSimple(){
+        alertPageShowSimple.click();
     }
-    public void showActionSheetOkCancel(){
-        clickByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[3]");
+    public void clickAlertPageShowOkCancel(){
+        alertPageShowOkCancel.click();
     }
-    public void showActionSheetCustom(){
-        clickByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[5]");
+    public void clickAlertPageShowCustomized(){
+        alertPageShowCustomized.click();
     }
-    public void showAlertSimple(){
-        clickByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[7]");
-    }
-    public void showAlertOkCancel(){
-        clickByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[9]");
-    }
-    public void showAlertCustom(){
-        clickByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[11]");
-    }
-    public void showSecureTextInput(){
-        clickByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[13]");
+    public void clickAlertViewShowOkSimple(){
+        alertViewShowOkSimple.click();
     }
 }
