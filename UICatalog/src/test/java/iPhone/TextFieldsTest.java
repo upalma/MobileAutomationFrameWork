@@ -52,7 +52,7 @@ public class TextFieldsTest extends NavigateUi {
     public void sendTextToUiTextFieldLeftView(){
         textFields.inputDataOnUiTextFieldLeftView();
     }
-   @Test
+    @Test
     public void sendTextToAllField(){
         textFields.inputDataOnAllField();
     }

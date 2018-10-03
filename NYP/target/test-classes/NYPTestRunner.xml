@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="iOS test suite on Anroid RealPhone">
+
+    <parameter name="OS" value="Android"/>
+    <parameter name="appType" value="Phone"/>
+    <parameter name="deviceType" value="RealDevice"/>
+    <parameter name="deviceName" value="Galaxy J3 Luna Pro"/>
+    <parameter name="version" value="7.0"/>
+
+    <test name="Breaking PagesTest" preserve-order="true">
+        <classes>
+            <class name="anroid.BreakdingNewsTest"/>
+        </classes>
+    </test>
+</suite>
