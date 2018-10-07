@@ -8,9 +8,10 @@
     <parameter name="deviceName" value="Galaxy J3 Luna Pro"/>
     <parameter name="version" value="7.0"/>
 
-    <test name="Breaking PagesTest" preserve-order="true">
+    <test name="NewYorkPost Pages Test" preserve-order="true">
         <classes>
             <class name="anroid.BreakdingNewsTest"/>
+            <class name="homePage.HomePageTest"/>
         </classes>
     </test>
 </suite>

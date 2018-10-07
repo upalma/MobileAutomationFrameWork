@@ -102,9 +102,7 @@ public class Base {
                     cap.setCapability(MobileCapabilityType.APP, findApp.getAbsolutePath());
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
                 }else if (deviceType.equalsIgnoreCase("Emulator")){
-
                     cap = new DesiredCapabilities();
                     cap.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
                     cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
