@@ -36,6 +36,31 @@ public class SegmentTest extends Base {
     public void uISegementControlStyleBarImageClick(){
         segments.clickOnUISegementControlStyleBarImage();
     }
+    @Test(priority = 1,enabled = true)
+    public void SegmentedControlTest() throws InterruptedException {
+        segments.setUiSegmentControl();
+        sleep(2);
+    }
+    @Test(priority = 2,enabled = true)
+    public void SegmentedStyleTest() throws InterruptedException {
+        segments.setUiSegmentControlStyleBordered();
+        sleep(2);
+    }
+    @Test(priority = 3,enabled = true)
+    public void SegmentedControlBarTest() throws InterruptedException {
+        segments.setUiSegmentControlStyleBar();
+        sleep(2);
+    }
+    @Test(priority = 4,enabled = true)
+    public void SegmentedControlTintTest() throws InterruptedException {
+        segments.setUiSegmentControlStyleBarTint();
+        sleep(2);
+    }
+    @Test(priority = 5,enabled = true)
+    public void SegmentedControlImageTest() throws InterruptedException {
+        segments.setUiSegmentcontrolStyleBarImage();
+        sleep(2);
+    }
 }
 
 

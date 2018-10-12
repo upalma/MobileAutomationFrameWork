@@ -10,7 +10,7 @@
 
     <test name="NewYorkPost Pages Test" preserve-order="true">
         <classes>
-            <class name="anroid.BreakdingNewsTest"/>
+            <class name="anroid.BreakdingNewsPageTest"/>
             <class name="homePage.HomePageTest"/>
         </classes>
     </test>
