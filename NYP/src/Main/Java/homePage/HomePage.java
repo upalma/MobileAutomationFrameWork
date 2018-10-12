@@ -26,5 +26,4 @@ public class HomePage extends Base {
         clickOnBreakingNewsSlider();
         clickOnChooseYourAlertPageContinue();
     }
-
 }
