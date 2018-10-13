@@ -10,12 +10,12 @@
 
     <test name="iPhonePagesTest" preserve-order="true">
         <classes>
-            <class name="iPhone.ButtonTest"/>
+            <!--<class name="iPhone.ButtonTest"/>-->
             <class name="iPhone.TextFieldsTest"/>
-            <class name="iPhone.SegmentTest"/>
-            <class name="iPhone.PickerTest"/>
-            <class name="iPhone.AlertsTest"/>
-            <class name="uicatalog.ipad.HomePage"/>
+            <!--<class name="iPhone.SegmentTest"/>-->
+            <!--<class name="iPhone.PickerTest"/>-->
+            <!--<class name="iPhone.AlertsTest"/>-->
+            <!--<class name="uicatalog.ipad.HomePage"/>-->
         </classes>
     </test>
 </suite>

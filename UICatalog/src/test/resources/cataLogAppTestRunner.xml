@@ -15,7 +15,7 @@
             <class name="iPhone.SegmentTest"/>
             <class name="iPhone.PickerTest"/>
             <class name="iPhone.AlertsTest"/>
-            <!--<class name="uicatalog.ipad.HomePage"/>-->
+            <class name="uicatalog.ipad.HomePage"/>
         </classes>
     </test>
 </suite>
